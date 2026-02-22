@@ -21,7 +21,8 @@ class TestAddition(unittest.TestCase):
 
 
 class TestSubtraction(unittest.TestCase):
-    pass
+    def test_subtraction(self):
+        pass
 
 
 class TestMultiplication(unittest.TestCase):
