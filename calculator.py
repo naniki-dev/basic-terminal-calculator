@@ -60,7 +60,7 @@ def times(x, y):
 
 def divide(x, y):
     if y == 0:
-        return "You cannot divide by zero"
+        return "Cannot divide by zero"
     return x / y
 
 

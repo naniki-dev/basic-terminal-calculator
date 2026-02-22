@@ -1,5 +1,6 @@
 import unittest
 import calculator
+from calculator import minus, times, divide
 
 
 class TestAddition(unittest.TestCase):
@@ -22,15 +23,36 @@ class TestAddition(unittest.TestCase):
 
 class TestSubtraction(unittest.TestCase):
     def test_subtraction(self):
-        pass
+        self.assertEqual(minus(9, 4), 5)
+
+    def test_subtraction_zero(self):
+        self.assertEqual(minus(6, 0), 6)
+    
+    def test_subtraction_negative(self):
+        self.assertEqual(minus(-6, -10), 4)
+
 
 
 class TestMultiplication(unittest.TestCase):
-    pass
+    def test_multiplication(self):
+        self.assertEqual(times(3, 2), 6)
+
+    def test_multiplication_negative(self):
+        self.assertEqual(times(-5, 2), -10)
+
+    def test_multiplication_zero(self):
+        self.assertEqual(times(8, 0), 0)
 
 
 class TestDivision(unittest.TestCase):
-    pass
+    def test_division(self):
+        self.assertEqual(divide(6, 2), 3)
+    
+    def test_division_negative(self):
+        self.assertEqual(divide(-10, -2), 5.0)
+
+    def test_division_zero(self):
+        self.assertEqual(divide(10, 0), "Cannot divide by zero")
 
 
 if __name__ == '__main__':
