@@ -2,7 +2,13 @@ def main():
     print("This is a basic terminal calculator. You can only + - x / two sets of digits.")
 
     while True:
-        sign = input("Wyd? (+ - x /) \n")
+
+        sign = input("Wyd? (+ - x /) or enter 'q' to quit/exit. \n> ").lower()
+
+        if sign == "q":
+            print("Bye!")
+            break
+
         if sign == "+":
             print(f"Answer: {add(first_num(),sec_num())}")
             break
@@ -18,11 +24,10 @@ def main():
         else:
             print("Enter a valid operator.")
 
-
 def first_num():
     while True:
         try:
-            num = int(input("Enter a first number: "))
+            num = int(input("Enter your first number: "))
             if not isinstance(num, int):
                 raise ValueError
             else:
@@ -30,18 +35,16 @@ def first_num():
         except ValueError:
             print("Only enter numbers.")
 
-
 def sec_num():
     while True:
         try:
-            num = int(input("Enter a second number: "))
+            num = int(input("Enter your second number: "))
             if not isinstance(num, int):
                 raise ValueError
-            else: 
+            else:
                 return num
         except ValueError:
             print("Only enter numbers.")
-
 
 def add(x, y):
     return x + y

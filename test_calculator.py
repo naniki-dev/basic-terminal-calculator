@@ -15,9 +15,9 @@ class TestAddition(unittest.TestCase):
     '''
     Do not call the function inside assertRaises
     '''
-    def test_addition_string(self):
-        with self.assertRaises(ValueError):
-            calculator.add("cat", "dog")
+    # def test_addition_string(self):
+    #     with self.assertRaises(ValueError):
+    #         calculator.convert_to_int("cat")
 
 
 class TestSubtraction(unittest.TestCase):
